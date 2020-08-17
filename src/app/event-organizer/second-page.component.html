@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row" >
+    <div class="col-md-6">
+      <label>Enter the Expire Date :</label><br>
+      <input type="date" class="form-control" id="datePicker" [value]="currentDate" (input)="getDateg($event.target.value)">
+    </div>
+    <div class="col-md-6">
+      <label>Enter the Expire Time :</label><br>
+      <input type="time" class="form-control" id="timePicker" [value]="currentTime" (input)="getTimeg($event.target.value)">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" >
+      <button class="btn" style="background-color: #004466;color: white" id="btnAdd" (click)="getEvent()"><i class="fa fa-plus"></i> Add Event</button>
+      <button class="btn" style="background-color: #004466;color: white" id="btnUpdate" (click)="updateEvent()"><i class="fa fa-edit"></i>  Update Event</button>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12" style="border:1px solid lightgray;border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+      <table class="table table-hover" style="width: 100%" id="tblEvents">
+        <thead>
+        <th>Date</th>
+        <th>Expire Time</th>
+        <th></th>
+        <th></th>
+        </thead>
+        <tbody >
+        <tr *ngFor="let event of events" >
+
+          <td (click)="giveal($event.target.value.toString())">{{ event.date }}</td>
+          <td class="timeCell">{{ event.time }}</td>
+          <td><p style="color: green">Active</p></td>
+          <td style="text-align: right">
+            <button class="btn dltRow" style="background-color: #992600;color: white"><i class="fa fa-trash" style="color: white"></i> Delete</button>&nbsp;
+            <button class="btn updRow" style="background-color: #004466;color: white" ><i class="fa fa-edit" style="color: white"></i> Update</button>
+          </td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+
+</div>

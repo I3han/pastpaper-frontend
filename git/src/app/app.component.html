@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="container-fluid" style="text-align: right;border-bottom: solid 2px #004466 ">
+  <button class="btn btn-style">Contact</button>
+  <button class="btn btn-style">View University Page</button>
+</div>
+
+<div class="container-fluid" >
+  <div class="row" style="padding-left: 10px; padding-right: 10px">
+    <div class="d-block d-md-none" >
+      <app-nav-bar-small></app-nav-bar-small>
+    </div>
+    <div class="d-none d-md-block col-md-2" >
+      <app-nav-panel></app-nav-panel>
+    </div>
+
+    <div class="col-sm-12 col-md-10" style="border-left: solid 1px #004466 ">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+.btn {
+
+  margin: 10px;
+  padding: 0.2em 1.8em;
+font-weight: bold;
+  border-radius: 20px;
+  border: solid 1.5px  #004466;
+}
+.btn:hover, .btn:focus {
+  color: #1ab2ff;
+  outline: 0;
+  border: solid 1.5px  #1ab2ff;
+}
+
+.btn-style {
+  border-color: #004466;
+  color: #004466;
+  background-image: -webkit-linear-gradient(45deg, gray 50%, transparent 50%);
+  background-image: linear-gradient(45deg, gray 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.btn-style:hover {
+  background-position: 0;
+}
+

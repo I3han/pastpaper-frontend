@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "digi-school-app": {
+      "hosting": {
+        "digi-school": [
+          "digi-school-app"
+        ]
+      }
+    }
+  }
+}

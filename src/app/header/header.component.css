@@ -1,0 +1,23 @@
+.nav{
+
+  background-color: #004466;
+}
+
+.btnSearch{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+div.navContent{
+  margin-top: 20px;
+}
+
+i.iconHV:hover{
+  color:  #00e6e6 !important;
+}

@@ -1,0 +1,79 @@
+<br>
+<div class="container">
+
+
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Upload Pastpapers
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+
+      <form (submit)="uploadPastpapers()"  [formGroup]="form">
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input
+          matInput
+          formControlName='title'
+          >
+          <mat-error *ngIf="form.get('title').invalid">Title required for Tasks</mat-error>
+        </mat-form-field>
+            &nbsp;
+        <mat-form-field>
+          <mat-label>Year</mat-label>
+          <input
+          matInput
+          formControlName='year'
+          >
+          <mat-error *ngIf="form.get('year').invalid">Year required for Tasks</mat-error>
+        </mat-form-field><br><br>
+        <button type="button" class="btn info" (click)="fileupload.click()">Select past papers</button>
+        <input
+        type="file"
+        class="inputbtn"
+        hidden
+        (change)=fileUploadEvent($event)
+        #fileupload
+        >
+
+        <button
+        type="submit"
+        class="btn info"
+        style="margin-left: 5px;"
+        [disabled]="!form.valid"
+        >Upload</button>
+        <mat-error *ngIf="!pastpaperExt">You need to upload a PDF file</mat-error>
+        <div class="pastpaper-review" *ngIf="pastpaperReview !== '' && pastpaperReview && pastpaperExt">
+
+          <span><i>{{pastpaperReview}}</i></span>
+          <br>
+              </div>
+      </form>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+  <br><br>
+  <!-- <a href="http://localhost:3000/pastpapers/science-1593848580743.pdf" download="awwad.pdf">awdwdwa</a> -->
+
+
+  <!-- <div *ngFor="let pastpaper of pastpapersarray" class="pastpapers">
+    <div class="pastpaper-container">
+      <p style="font-weight: bold;">{{ pastpaper.name }}</p>
+      <p>{{ pastpaper.year }}</p>
+    </div>
+  </div> -->
+
+  <div *ngFor="let paper of papers" class="pastpapers">
+    <div class="pastpaper-container">
+      <p style="font-weight: bold;">Title : {{ paper.title }}</p>
+      <hr>
+      <p>Year : {{ paper.year }}</p>
+       <a class="dwldPaper" [href]="paper.ppPath">Download</a>
+    </div>
+  </div>
+
+</div>

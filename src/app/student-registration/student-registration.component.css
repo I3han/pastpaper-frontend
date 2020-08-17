@@ -1,0 +1,32 @@
+table{
+  width: 70%;
+  float: right;
+}
+
+th,td{
+  text-align: center;
+}
+
+.form-reg{
+  margin-top: 150px;
+  margin-bottom: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  border: 2px solid rgb(34, 69, 133);
+  border-radius: 5px;
+  width: 50%;
+  background-color: aliceblue;
+
+}
+
+label{
+  font-size: 20px;
+}
+
+.bg{
+  background-image: url("../../assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}

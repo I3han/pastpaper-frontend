@@ -1,0 +1,57 @@
+div.pastpapers{
+  padding:10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 10px;
+  width: 160px;
+  height:190px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+div.pastpapers:hover{
+  background-color: rgb(214, 233, 233);
+}
+
+div .pastpapers .pastpaper-container{
+  padding-top: 25px;
+}
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.info {
+  border-color: #194e79;
+  color: rgb(29, 81, 133);
+}
+
+.info:hover {
+  background: #124269;
+  color: white;
+}
+
+.pastpaper-review{
+  height: 1rem;
+  margin-left: 15px;
+  padding: 5px;
+}
+.pastpaper-review span{
+
+
+}
+
+.dwldPaper{
+  padding: 5px;
+  text-decoration: none;
+}
+.dwldPaper:hover{
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,23 @@
+<br>
+<div class="contaner">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Course ID</th>
+        <th>Course Title</th>
+        <th>Lecturer</th>
+        <th>Year</th>
+      </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of coursesarray">
+          <th>{{ course.id }}</th>
+          <th>{{ course.name }}</th>
+          <th>{{ course.lecturer }}</th>
+          <th>{{ course.year }}</th>
+        </tr>
+    </tbody>
+
+  </table>
+</div>
