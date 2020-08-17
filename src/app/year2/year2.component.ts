@@ -61,7 +61,7 @@ export class Year2Component implements OnInit {
     console.log(this.form.get('pastpapers').value);
     //const pastpaper = {title: this.form.get('title').value , year: this.form.get('year').value};
 
-    this.http.post<{ message: string }>('http://localhost:3000/api/year2pps', paperdata).subscribe(
+    this.http.post<{ message: string }>('https://pastpaper-platform.herokuapp.com/api/year2pps', paperdata).subscribe(
       (responseData) => {
         console.log(responseData['message']);
         // this.form.reset();
@@ -76,7 +76,7 @@ export class Year2Component implements OnInit {
   getPapersFromServer() {
     this.http
       .get<{ message: string, papers: any }>(
-        'http://localhost:3000/api/year2pps'
+        'https://pastpaper-platform.herokuapp.com/api/year2pps'
       )
       .pipe(map((postData) => {
         return postData.papers.map(paper => {
@@ -96,7 +96,7 @@ export class Year2Component implements OnInit {
   }
 
   deleteRecord(id: string, i: number) {
-    this.http.delete<{ message: string }>('http://localhost:3000/api/year2pps/' + id).subscribe(
+    this.http.delete<{ message: string }>('https://pastpaper-platform.herokuapp.com/api/year2pps/' + id).subscribe(
       (responseData) => {
         alert(responseData['message']);
       });
